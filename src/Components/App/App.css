@@ -27,7 +27,7 @@ h2 {
 }
 
 .App {
-  height: 100%;
+  height: 1500px;
   padding: 0 17% 10% 17%;
   background-image: url("../../img/background_photo_desktop.webp");
   background-size: cover;
@@ -45,6 +45,9 @@ h2 {
 }
 
 @media only screen and (max-width: 1020px) {
+  .App{ 
+    height: 2000px
+  }
   .App-playlist {
     align-items: center;
     flex-direction: column;
