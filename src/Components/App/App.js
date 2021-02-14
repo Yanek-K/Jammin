@@ -3,53 +3,17 @@ import "./App.css";
 import SearchBar from '../SearchBar/SearchBar'
 import SearchResults from '../SearchResults/SearchResults'
 import Playlist from '../Playlist/Playlist'
+import Spotify from '../../util/Spotify'
 
 class App extends React.Component {
   constructor(props) {
     super()
     this.state = {
-      searchResults: [
-          {
-            name: "Brothers In Arms",
-            artist: "Mark Knopfler",
-            album: "Brothers In Arms",
-            id: 1
-          },
-          {
-            name: "Father and Son",
-            artist: "Cat Stevens",
-            album: "Tea for the Tillerman",
-            id: 2
-          },
-          {
-            name: "Sultans of Swing",
-            artist: "Dire Straits",
-            album: "Alchemy Live",
-            id: 3
-          }
-      ],
-      playlistName: "Slow Rock",
-      playlistTracks: [
-          {
-            name: "Tunnel Of Love",
-            artist: "Dire Straits",
-            album: "Brothers In Arms",
-            id: 4
-          },
-          {
-            name: "The Boxer",
-            artist: "Simon and Garfunkel",
-            album: "Bridge over Tr. Water",
-            id: 5
-          },
-          {
-            name: "Layla",
-            artist: "Eric Clapton",
-            album: "Layla",
-            id: 6
-          }
-      ]
-    }
+      searchResults: [],
+      playlistName: "My Playlist",
+      playlistTracks: []
+    };
+
     this.addTrack = this.addTrack.bind(this)
     this.removeTrack = this.removeTrack.bind(this)
     this.updatePlaylistName = this.updatePlaylistName.bind(this)
@@ -79,13 +43,19 @@ class App extends React.Component {
   }
 
   savePlaylist(){
-    const trackURIs = this.state.playlistTracks.map(track => 
-      track.uri
-    )
+    const trackUris = this.state.playlistTracks.map(track => track.uri)
+    Spotify.savePlaylist(this.state.playlistName, trackUris).then(() => {
+      this.setState({
+        playlistName: 'New Playlist',
+        playlistTracks: []
+      })
+    })
   }
 
   search(term){
-    console.log(term)
+    Spotify.search(term).then(searchResults => {
+      this.setState({searchResults: searchResults})
+    })
 }
 
 
