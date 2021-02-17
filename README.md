@@ -3,7 +3,6 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
@@ -14,8 +13,6 @@
 ## General info
 The project allows a user to access the Spotify API to search for their favorite music. The user can then create a new playlist with the App and use it to save the playlist to their spotify account
 
-## Screenshots
-![Example screenshot](./img/screenshot.png)
 
 ## Technologies
 * React - version 17.0.1
