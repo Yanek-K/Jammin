@@ -12,38 +12,36 @@
 * [Contact](#contact)
 
 ## General info
-Add more general information about project. What the purpose of the project is? Motivation?
+The project allows a user to access the Spotify API to search for their favorite music. The user can then create a new playlist with the App and use it to save the playlist to their spotify account
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
 
 ## Technologies
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+* React - version 17.0.1
+* Javascript - version ES6 (ECMAScript 2018)
+* CSS3 
+* HTML5
 
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
+Setup is simple. Access the App through your favorite browser. Login in to your Spotify account through the app and you are ready to go!
 
-## Code Examples
-Show examples of usage:
-`put-your-code-here`
 
 ## Features
 List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* Access the Spotify API and have access to all songs, albums, and artists on Spotify
+* Login to your Spotify account through the app
+* Create custom playlists and save them directly to your Spotify account
 
 To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+* Create a process to access all of your spotify playlists and make changes to them directly in the App
+
 
 ## Status
-Project is: _in progress_, _finished_, _no longer continue_ and why?
+Project is: Finished. Improvements are on their way.
 
 ## Inspiration
-Add here credits. Project inspired by..., based on...
+This project is based on the Codeacedemy course and utilizes design from the course
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Created by Yanek-K (yanek.dev@gmail.com) - feel free to contact me!
